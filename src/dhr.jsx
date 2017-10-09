@@ -57,9 +57,9 @@ class DHR extends Component {
                     this.setState({
                         width: 0
                     })
-                }, this.props.delay * 1000);
+                }, this.props.delay || 0.2 * 1000);
             })
-        }, this.props.delay * 2000);
+        }, this.props.delay || 0.2 * 2000);
     }
 
     loadContent(howmuch) {
@@ -76,7 +76,7 @@ class DHR extends Component {
                     this.setState({
                         width: howmuch < 100 ? howmuch > 0 ? howmuch : 0 : 100
                     })
-                }, this.props.delay * 1000);
+                }, this.props.delay || 0.2 * 1000);
             })
         }
     }
